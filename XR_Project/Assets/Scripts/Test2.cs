@@ -6,54 +6,48 @@ using UnityEngine.UI;
 public class Test2 : MonoBehaviour
 {
     public int hp = 180;
-    public Text textHpUI;   //Hp UI í‘œì‹œ ì„ ì–¸
-    public Text textStateUI;    //State UI í‘œì‹œ ì„ ì–¸
+    public Text textHpUI;                   //Hp UI Ç¥½Ã ¼±¾ð
+    public Text textStateUI;                //State Ç¥½Ã ¼±¾ð
     // Start is called before the first frame update
     void Start()
     {
-        // if(hp <= 50)
-        // {
-        //     Debug.Log("ë„ë§!");
-        // }
-        // else if(hp>=200)
-        // {
-        //     Debug.Log("ê³µê²©!");
-        // }
-        // else
-        // {
-        //     Debug.Log("ë°©ì–´!");            
-        // }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-//--------------------------------------------------
-//UI ë‚´ìš©
-//--------------------------------------------------        
-        textHpUI.text = hp.ToString();
+        // ============================================================
+        //UI ³»¿ë
+        // ============================================================
+        textHpUI.text = hp.ToString();         //hp ¹®ÀÚ¿­·Î º¯°æ
 
-        if(hp <= 50)
+        if (hp <= 50)
         {
-            textStateUI.text = "Run!";
+            textStateUI.text = "Run !";
         }
-        else if(hp>=200)
+        else if (hp >= 200)
         {
-            textStateUI.text = "Attack!";
+            textStateUI.text = "Attack !";
         }
         else
         {
-            textStateUI.text = "Defance!";  
-        }        
-//--------------------------------------------------
-//Input ë‚´ìš©
-//--------------------------------------------------
-        if(Input.GetMouseButtonDown(0)){    //ë§ˆìš°ìŠ¤ ì™¼ìª½ ë²„íŠ¼
-            hp+=10;
+            textStateUI.text = "Defence !";
         }
 
-        if(Input.GetMouseButtonDown(1)){    //ë§ˆìš°ìŠ¤ ì˜¤ë¥¸ìª½ ë²„íŠ¼
-            hp-=10;
-        }        
+        // ============================================================
+        //input ³»¿ë
+        // ============================================================
+
+        if (Input.GetMouseButtonDown(0))    //¸¶¿ì½º ¿ÞÂÊ ¹öÆ°
+        {
+            hp += 10;
+        }
+
+        if (Input.GetMouseButtonDown(1))    //¸¶¿ì½º ¿À¸¥ÂÊ ¹öÆ°
+        {
+            hp -= 10;
+        }
+
     }
 }

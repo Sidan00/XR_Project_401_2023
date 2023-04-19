@@ -8,8 +8,8 @@ public class Test : MonoBehaviour
     void Start()
     {
         int age;
-        age= 30;
-        Debug.Log(age);   
+        age = 30;
+        Debug.Log(age);
     }
 
     // Update is called once per frame

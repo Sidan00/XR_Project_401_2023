@@ -11,6 +11,7 @@ public class BlockMove : MonoBehaviour
     private IEnumerator moveBlockTime(Vector3 dir)
     {
         move = true;
+
         float elapsedTime = 0.0f;
 
         Vector3 currentPosition = transform.position;
@@ -22,8 +23,14 @@ public class BlockMove : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
         transform.position = transform.position;
         move = false;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -31,7 +38,7 @@ public class BlockMove : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && move == false)
         {
-            StartCoroutine(moveBlockTime(new Vector3(0.0f, 0.0f, 1.0f)));
+            StartCoroutine(moveBlockTime(new Vector3(0.0f, 0.0f , 1.0f)));
         }
     }
 }

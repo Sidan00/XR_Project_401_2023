@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    // Start is called before the first frame update
     float rotSpeed = 0;
 
-    // Update is called once per frame
+    // Start is called before the first frame update
     void Update()
     {
+        
         if(Input.GetMouseButtonDown(0))
         {
             rotSpeed = 10000;
@@ -20,4 +20,5 @@ public class CharacterController : MonoBehaviour
         rotSpeed *= 0.99f;
 
     }
+
 }
