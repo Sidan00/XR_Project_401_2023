@@ -14,7 +14,6 @@ public class ProjectileController : MonoBehaviour
         temp.transform.position = this.gameObject.transform.position;
         temp.transform.localScale = Vector3.one * 0.3f;
         temp.GetComponent<ProjectileMove>().launchDirection = transform.forward;
-        temp.GetComponent<ProjectileMove>().projectileType = ProjectileMove.PROJECTILETYPE;
 
         Destroy(temp, 10.0f);                          //10초후에 생성된 발사체 삭제
 
