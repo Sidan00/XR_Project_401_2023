@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Object
   - Monster
+  - Ground
+  - GameManager
+  - FxTemporaire
+  - UIHealthBar
   layers:
   - Default
   - TransparentFX

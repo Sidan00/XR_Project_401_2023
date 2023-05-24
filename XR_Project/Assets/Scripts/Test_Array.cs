@@ -14,11 +14,10 @@ public class Test_Array : MonoBehaviour
         Array[3] = 15;
         Array[4] = 100;
 
-        for( int i = 0; i< Array.Length; i++)
+        for(int i = 0; i < Array.Length; i++)
         {
             Debug.Log(Array[i]);
         }
-
     }
 
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     float rotSpeed = 0;
-
-    // Start is called before the first frame update
+    
+    // Update is called once per frame
     void Update()
     {
         
@@ -20,5 +20,4 @@ public class CharacterController : MonoBehaviour
         rotSpeed *= 0.99f;
 
     }
-
 }
